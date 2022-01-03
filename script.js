@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         // case where computer wins
         // return value is -1
-        roundResult.textContent = "You lost this round! " + computerSelection[0].toUpperCase() + computerSelection.slice(1) + " beats " + playerSelection[0].toUpperCase() + playerSelection.slice(1) + ".";
+        roundResult.textContent = "You lost this round! " + computerSelection[0].toUpperCase() + computerSelection.slice(1) + " beats " + playerSelection + ".";
         return -1;
     }
 }
