@@ -16,6 +16,7 @@ const computerScoreDisplay = document.querySelector("#computer-score");
 
 // function for a single round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
+    // update images
     if (playerSelection == computerSelection) {
         // draw case - return value is 0
         roundResult.textContent = "Draw: You both picked " + playerSelection.toLowerCase() + ".";
@@ -29,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         // case where computer wins
         // return value is -1
-        roundResult.textContent = "You lost this round! " + computerSelection + " beats " + playerSelection[0].toUpperCase() + playerSelection.slice(1) + ".";
+        roundResult.textContent = "You lost this round! " + computerSelection[0].toUpperCase() + computerSelection.slice(1) + " beats " + playerSelection[0].toUpperCase() + playerSelection.slice(1) + ".";
         return -1;
     }
 }
@@ -38,12 +39,18 @@ function playRound(playerSelection, computerSelection) {
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
+const resetButton = document.querySelector("#reset");
 
-// update score function
+// update score functions
 let playerScore = 0, computerScore = 0;
 function updateScore() {
-    playerScoreDisplay.textContent = `${playerScore}`;
-    computerScoreDisplay.textContent = `${computerScore}`;
+    playerScoreDisplay.textContent = `Your Score: ${playerScore}`;
+    computerScoreDisplay.textContent = `Computer Score: ${computerScore}`;
+}
+function resetScore() {
+    playerScore = computerScore = 0;
+    roundResult.textContent = "Click one of the options to play!";
+    updateScore();
 }
 
 updateScore(playerScore, computerScore);
@@ -93,6 +100,10 @@ scissorsButton.addEventListener('click', () => {
         updateScore();
         checkVictory();
     } else {
-        
+
     }
+});
+
+resetButton.addEventListener('click', () => {
+    resetScore();
 });
