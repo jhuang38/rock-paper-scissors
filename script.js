@@ -79,8 +79,6 @@ rockButton.addEventListener('click', () => {
         checkResult(result);
         updateScore();
         checkVictory();
-    } else {
-
     }
 });
 paperButton.addEventListener('click', () =>  {
@@ -89,8 +87,6 @@ paperButton.addEventListener('click', () =>  {
         checkResult(result);
         updateScore();
         checkVictory();
-    } else {
-
     }
 });
 scissorsButton.addEventListener('click', () => {
@@ -99,8 +95,6 @@ scissorsButton.addEventListener('click', () => {
         checkResult(result);
         updateScore();
         checkVictory();
-    } else {
-
     }
 });
 
