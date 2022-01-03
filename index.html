@@ -4,10 +4,32 @@
     <head>
         <title>Rock Paper Scissors</title>
         <meta charset="utf-8">
-        <script src = "script.js"></script>
+        <script src = "script.js" defer></script>
+        <link rel = "stylesheet" href = "style.css">
     </head>
     <body>
-        <h1>Rock Paper Scissors</h1>
-        <p>You should play this using the window prompts. Please type in rock, paper, or scissors for each round.</p>
+        <div class = "title">
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <div class = "results">
+            <div class = "player-score-container">
+                <div id = "player-score">
+
+                </div>
+            </div>
+            <div class = "text">
+
+            </div>
+            <div class = "computer-score-container">
+                <div id = "computer-score">
+
+                </div>
+            </div>
+        </div>
+        <div class = "buttons">
+            <button id = "rock">Rock</button>
+            <button id = "paper">Paper</button>
+            <button id = "scissors">Scissors</button>
+        </div>
     </body>
 </html>
