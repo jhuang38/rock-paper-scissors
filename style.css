@@ -77,6 +77,10 @@ button {
     box-shadow: 5px 10px;
 }
 
+button:active {
+    transform: scale(0.9);
+}
+
 .reset-container, .options {
     display: flex;
     gap: 32px;
